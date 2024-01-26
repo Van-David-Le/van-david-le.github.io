@@ -15,19 +15,19 @@ Gustave is an ev3 mindstorm robot designed during the OS course. It's purpose is
 
 Front:
 
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+![front](assets/img/front.jpg)
 
 Side:
 
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+![Side](assets/img/Side.jpg)
 
 Back:
 
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+![Back](assets/img/Back.jpg)
 
 Top:
 
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+![Top](assets/img/Top.jpg)
 
 
 Here's a code chunk:
