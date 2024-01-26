@@ -18,6 +18,7 @@ The last motor is used to activate the trap at the back of the robot
 Front                                           |  Back
 :----------------------------------------------:|:----------------------------------------------:
 <img src="../assets/img/Front.jpg" width="450"> | <img src="../assets/img/Back.jpg" width="450">
+
 Side                                            |  Top
 :----------------------------------------------:|:----------------------------------------------:
 <img src="../assets/img/Side.jpg" width="450">  | <img src="../assets/img/Top.jpg" width="450">
