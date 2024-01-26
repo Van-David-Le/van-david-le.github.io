@@ -2,9 +2,6 @@
 layout: post
 title: How Gustave works
 subtitle: Strategy and details 
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
-comments: true
 author: Van David LE
 ---
 
