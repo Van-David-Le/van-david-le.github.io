@@ -12,19 +12,19 @@ Gustave is an ev3 mindstorm robot designed during the OS course. It's purpose is
 
 Front:
 
-<img src="../assets/img/Front.jpg" width="300">
+<img src="../assets/img/Front.jpg" width="450">
 
 Side:
 
-<img src="../assets/img/Side.jpg" width="300">
+<img src="../assets/img/Side.jpg" width="450">
 
 Back:
 
-<img src="../assets/img/Back.jpg" width="300">
+<img src="../assets/img/Back.jpg" width="450">
 
 Top:
 
-<img src="../assets/img/Top.jpg" width="300">
+<img src="../assets/img/Top.jpg" width="450">
 
 
 Here's a code chunk:
