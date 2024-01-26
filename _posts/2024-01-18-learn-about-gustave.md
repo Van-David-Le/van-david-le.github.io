@@ -10,6 +10,19 @@ Gustave is an ev3 mindstorm robot designed during the OS course. It's purpose is
 
 ## Architecture of Gustave
 
+# Four motors are used and 2 sensors
+2 motors are used for the 2 front wheels.
+1 motor is used to activate the claw to grab the flag
+The last motor is used to activate the trap at the back of the robot
+
+Front                                           |  Back
+:----------------------------------------------:|:----------------------------------------------:
+<img src="../assets/img/Front.jpg" width="450"> | <img src="../assets/img/Back.jpg" width="450">
+
+Side                                            |  Top
+:----------------------------------------------:|:----------------------------------------------:
+<img src="../assets/img/Side.jpg" width="450">  | <img src="../assets/img/Top.jpg" width="450">
+
 Front:
 
 <img src="../assets/img/Front.jpg" width="450">
