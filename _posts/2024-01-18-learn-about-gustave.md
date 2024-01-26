@@ -11,28 +11,24 @@ author: Van David LE
 {: .box-success}
 Gustave is an ev3 mindstorm robot designed during the OS course. It's purpose is to be put in an arena against another robot. Each robot needs to catch the flag situated in the other part of the arena. 
 
-**Here is some bold text**
+## Architecture of Gustave
 
-## Here is a secondary heading
-
-[This is a link to a different site](https://deanattali.com/) and [this is a link to a section inside this page](#local-urls).
-
-Here's a table:
-
-| Number | Next number | Previous number |
-| :------ |:--- | :--- |
-| Five | Six | Four |
-| Ten | Eleven | Nine |
-| Seven | Eight | Six |
-| Two | Three | One |
-
-How about a yummy crepe?
+Front:
 
 ![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
 
-It can also be centered!
+Side:
 
-![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg){: .mx-auto.d-block :}
+![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+
+Back:
+
+![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+
+Top:
+
+![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg)
+
 
 Here's a code chunk:
 
