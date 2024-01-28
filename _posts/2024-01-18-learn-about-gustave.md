@@ -5,7 +5,7 @@ subtitle: Strategy and details
 author: Van David LE
 ---
 
-{: .box-success}
+{: .box-note}
 Gustave is an ev3 mindstorm robot designed during the OS course. It's purpose is to be put in an arena against another robot. Each robot needs to catch the flag situated in the other part of the arena. 
 
 ## Architecture of Gustave
@@ -16,6 +16,8 @@ Gustave is an ev3 mindstorm robot designed during the OS course. It's purpose is
 1 motor is used to activate the claw to grab the flag. \
 The last motor is used to activate the trap at the back of the robot.
 
+### Annotated pictures of Gustave
+
 Front                                           |  Back
 :----------------------------------------------:|:----------------------------------------------:
 <img src="../assets/img/Front.jpg" width="450"> | <img src="../assets/img/Back.jpg" width="450">
@@ -24,32 +26,17 @@ Side                                            |  Top
 :----------------------------------------------:|:----------------------------------------------:
 <img src="../assets/img/Side.jpg" width="450">  | <img src="../assets/img/Top.jpg" width="450">
 
-Here's a code chunk:
 
-~~~
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-~~~
+## Strategy to win the game
 
-And here is the same code with syntax highlighting:
+### Rules of the game
 
-```javascript
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-```
+The game is taking place in a rectangular arena with a circular obstacle in the middle. The two robots must start in a square on each side. The flags are placed behind the starting point of the robots. 
 
-And here is the same code yet again but with line numbers:
 
-{% highlight javascript linenos %}
-var foo = function(x) {
-  return(x + 5);
-}
-foo(3)
-{% endhighlight %}
+
+
+
 
 ## Boxes
 You can add notification, warning and error boxes like this:
