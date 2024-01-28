@@ -33,7 +33,7 @@ Side                                            |  Top
 
 The game is taking place in a rectangular arena with a circular obstacle in the middle. The two robots must start in a square on each side. The flags are placed behind the starting point of the robots. 
 
-
+![Arena](../assets/img/Arena.png)
 
 
 
