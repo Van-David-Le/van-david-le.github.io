@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How Gustave works
-subtitle: Strategy and details 
+title: Test post to delete
+subtitle: Test post to delete
 gh-repo: daattali/beautiful-jekyll
 gh-badge: [star, fork, follow]
 tags: [test]
