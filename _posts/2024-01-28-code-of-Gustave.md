@@ -11,35 +11,35 @@ author: Van David LE
 
 ### Moving forward
 
-{% highlight c linenos %}
+```
 pass
-{% endhighlight %}
+```
 
 ### Rotations
 
-{% highlight c linenos %}
+```
 pass
-{% endhighlight %}
+```
 
 ## Sensors
 
 ### Ultra sonic sensor
 
-{% highlight c linenos %}
+```
 pass
-{% endhighlight %}
+```
 
 ### Gyroscope
 
-{% highlight c linenos %}
+```
 pass
-{% endhighlight %}
+```
 
 # Main algorithm that runs during the round
 
-{% highlight c linenos %}
+```
 pass
-{% endhighlight %}
+```
 
 
 
