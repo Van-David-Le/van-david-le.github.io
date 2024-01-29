@@ -52,6 +52,6 @@ If he meets an obstacle (the other robot) at some point, he will begin to rotate
 
 Once on the opponent's side, he will come back to the middle of the arena and move in front of the flag and proceed to catch the flag.\
 
-After that, he will will come back to its starting point through the path he followed and release the flag.\
+After that, he will will come back following the same opponent detecting process than at the beginning.
 
 **Picture of the path to come back**
