@@ -12,13 +12,17 @@ author: Van David LE
 ### Moving forward
 
 ```
-pass
+int main(){
+  return 0
+}
 ```
 
 ### Rotations
 
 ```
-pass
+int main(){
+  return 0
+}
 ```
 
 ## Sensors
@@ -26,13 +30,17 @@ pass
 ### Ultra sonic sensor
 
 ```
-pass
+int main(){
+  return 0
+}
 ```
 
 ### Gyroscope
 
 ```
-pass
+int main(){
+  return 0
+}
 ```
 
 # Main algorithm that runs during the round
