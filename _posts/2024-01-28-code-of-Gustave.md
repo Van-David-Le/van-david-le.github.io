@@ -5,7 +5,24 @@ subtitle: The source code and the technical details
 author: Van David LE
 ---
 
-Here's a code chunk:
+# Elemental pieces of code used:
+
+## Moving
+
+### Moving forward
+
+### Rotations
+
+
+## Sensors
+
+### Ultra sonic sensor
+
+### Gyroscope
+
+
+
+
 
 ~~~
 var foo = function(x) {
