@@ -37,21 +37,21 @@ The game is taking place in a rectangular arena with a circular obstacle in the 
 
 ### Strategy
 
-Gustave will start by reach the side of the arena in order to avoid the central obstacle. \
+Gustave will start by reach the side of the arena in order to avoid the central obstacle.
 
-**Picture of the initial movement** \ 
+![Initial](../assets/img/Initial.png)
 
-Then, Gustave will move forward and scan everything in front of him. \
-If there is nothing, he will continue to move forward until he reaches the other side of the arena. \
+Then, Gustave will move forward and scan everything in front of him.
+If there is nothing, he will continue to move forward until he reaches the other side of the arena.
 
-**Picture of the path when no opponent** 
+![NoOpp](../assets/img/NoOpp.png)
 
-If he meets an obstacle (the other robot) at some point, he will begin to rotate to avoid the obstacle from the other side of the arena. Then, he will move forward until he reaches the back of the arena.\
+If he meets an obstacle (the other robot) at some point, he will begin to rotate to avoid the obstacle from the other side of the arena. Then, he will move forward until he reaches the back of the arena.
 
-**Picture of the path when opponent** \
+![Opp](../assets/img/Opp.png)
 
-Once on the opponent's side, he will come back to the middle of the arena and move in front of the flag and proceed to catch the flag.\
+Once on the opponent's side, he will come back to the middle of the arena and move in front of the flag and proceed to catch the flag.
 
 After that, he will will come back following the same opponent detecting process than at the beginning.
 
-**Picture of the path to come back**
+![Back](../assets/img/Back.png)
