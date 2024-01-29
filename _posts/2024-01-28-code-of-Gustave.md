@@ -11,14 +11,35 @@ author: Van David LE
 
 ### Moving forward
 
+~~~
+pass
+~~~
+
 ### Rotations
 
+~~~
+pass
+~~~
 
 ## Sensors
 
 ### Ultra sonic sensor
 
+~~~
+pass
+~~~
+
 ### Gyroscope
+
+~~~
+pass
+~~~
+
+# Main algorithm that runs during the round
+
+~~~
+pass
+~~~
 
 
 
