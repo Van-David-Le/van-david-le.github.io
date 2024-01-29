@@ -21,10 +21,7 @@ author: "Group 1: SARRAZIN Alban, UNG Guillaume, MUNTIAN Alexander, LE Van David
 
 navbar-links:
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Author's home: "https://github.com/Van-David-Le"
 
 ################
 # --- Logo --- #
@@ -40,37 +37,6 @@ round-avatar: true
 # If you want to have an image logo in the top-left corner instead of having the title of the website,
 # then specify the following parameter
 #title-img: /path/to/image
-
-
-#####################################
-# --- Footer social media links --- #
-#####################################
-
-# Select the social network links that you want to show in the footer.
-# You can change the order that they show up on the page by changing the order here.
-# Uncomment the links you want to show and add your information to each one.
-#  medium: yourname
-#  reddit: yourname
-#  linkedin: daattali
-#  xing: yourname
-#  stackoverflow: "3943160/daattali"
-#  snapchat: deanat78
-#  instagram: deanat78
-#  spotify: yourname
-#  telephone: +14159998888
-#  steam: deanat78
-#  twitch: yourname
-#  yelp: yourname
-#  telegram: yourname
-#  calendly: yourname
-#  mastodon: instance.url/@username
-#  bluesky: yourname
-#  ORCID: your ORCID ID
-#  google-scholar: your google scholar
-#  discord: "invite_code" or "users/userid" or "invite/invite_code" 
-#  kaggle: yourname
-#  hackerrank: yourname
-#  gitlab: yourname
 
 ###########################
 # --- General options --- #
