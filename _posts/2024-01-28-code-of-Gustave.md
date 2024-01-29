@@ -13,6 +13,7 @@ author: Van David LE
 
 ```c
 int move_forward(uint8_t sn1, uint8_t sn2, uint8_t snUS, uint8_t snGyro, float gyroval, int max_speed, int distance, int* mode){
+    \\ This function makes the robot go forward for "distance"
     set_tacho_speed_sp(sn1, max_speed);
     set_tacho_speed_sp(sn2, max_speed);
     set_tacho_command_inx(sn1, TACHO_RUN_FOREVER);
