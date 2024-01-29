@@ -54,4 +54,4 @@ Once on the opponent's side, he will come back to the middle of the arena and mo
 
 After that, he will will come back following the same opponent detecting process than at the beginning.
 
-![Back](../assets/img/Back.png)
+![Back](../assets/img/Backtrack.png)
