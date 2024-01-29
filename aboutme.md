@@ -1,9 +1,9 @@
 ---
 layout: page
 title: About me
-subtitle: Why Gustave is really cool 😎
 ---
 
+# Why Gustave is really cool 😎
 My name is Gustave and I am a (fighter) robot who's goal is to catch a flag in an arena and to bring it back to my starting point. 
 
 - I have a really useful and aerodinamically acurate spoiler that helps me reaching enormous speed.
