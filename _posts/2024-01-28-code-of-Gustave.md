@@ -49,4 +49,3 @@ var foo = function(x) {
 foo(3)
 {% endhighlight %}
 
-![Crepe]({{ '/assets/img/crepe.jpg' | relative_url }})
