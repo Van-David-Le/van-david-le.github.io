@@ -239,6 +239,144 @@ void claw(uint8_t sn_arm, int degrees, int speed){
     set_tacho_command_inx(sn_arm, TACHO_STOP);
 }
 ```
+## Cartography
+
+The robot updates a map of the arena, allowing to correct its position and detect the ennemy robot.
+
+Gets an averaged measure of the ultrasonic sensor, to eliminated wrong readings.
+Author: Alexander
+```c
+int getAvgUltrasonicDistance(sensor_t ultrasonic, int readings) {
+    int sum = 0;
+    int count = 0;
+    int distance = getUltrasonicDistance(ultrasonic);
+    while (count < readings) {
+        sum += distance;
+        count++;
+        distance = getUltrasonicDistance(ultrasonic);
+    }
+    return sum / readings;
+}
+```
+
+Calculates the expected measure of the ultrasonic sensor, to compare with real readings.
+Author: Alexander
+
+```c
+int expectedUsMeasure(Pos currentPos) {
+    // Returns the expected US measure at the current position
+    double rad = currentPos.angle * PI / 180.0;
+    int lwd = 9000;
+    int rwd = 9000;
+    int twd = 9000;
+    int bwd = 9000;
+    int bd;
+    if (abs(cos(rad)) >= 0.001 ) { // Vertical walls
+        
+        if (cos(rad) > 0) {
+            // Left wall
+            rad = abs(PI - rad);
+            lwd = (int)(currentPos.x / cos(rad)); 
+        } else {
+            // Right wall
+            rad = abs(rad);
+            rwd = (int)((1200 - currentPos.x) / cos(rad));
+        }
+
+    }
+
+    if (abs(sin(rad))>= 0.001) {  // Horizontal walls
+        if (sin(rad) > 0) {
+            // Top wall
+            rad = abs(PI / 2 - rad);
+            twd = (int)((2000 - currentPos.y) / sin(rad));
+        } else {
+            // Bottom wall
+            rad = abs(3 * PI / 2 - rad);
+            bwd = (int)(currentPos.y / sin(rad));
+        }
+        
+    }
+
+    double angle_to_box = abs(atan2(abs(1000 - currentPos.y), abs(600 - currentPos.x)));
+
+    if (angle_to_box < PI/8 && sin(angle_to_box) != 0) {
+        bd = (int)abs(1000 - currentPos.y) / sin(angle_to_box);
+    } 
+    
+    if (bd) {
+        return bd;
+    } else {
+        return min(min(lwd, rwd), min(twd, bwd));
+    }
+}
+```
+
+Corrects the assumed position of the robot to one that is more accurate with the sensor readings.
+Author: Alexander
+
+```c
+Pos correctPos(Pos currentPos, sensor_t gyro) {
+    // Tries to correct the position from assumed current position using US sensor data. Angle is supposed to be correct.
+    int valid_angle = getGyroAngle(gyro);
+
+    int dist = expectedUsMeasure(currentPos);
+    Pos projectedPoint = {0,0,0};
+    projectedPoint.x = currentPos.x + dist * cos(valid_angle * PI / 180.0);
+    projectedPoint.y = currentPos.y + dist * sin(valid_angle * PI / 180.0);
+
+    if (projectedPoint.x < -10 || projectedPoint.x > 1210 || projectedPoint.y < -10 || projectedPoint.y > 2010) {
+        return currentPos;
+    }
+
+    if (projectedPoint.x > -10 && projectedPoint.x < 10 && projectedPoint.y > 20 && projectedPoint.y < 1980) { // Left wall
+        projectedPoint.x = 0;
+    } else if (projectedPoint.x > 1190 && projectedPoint.x < 1210 && projectedPoint.y > 20 && projectedPoint.y < 1980) { // Right wall
+        projectedPoint.x = 1200;
+    } else if (projectedPoint.y > 1990 && projectedPoint.y < 2010 && projectedPoint.x > 20 && projectedPoint.x < 1180) { // Top wall
+        projectedPoint.y = 2000;
+    } else if (projectedPoint.y > -10 && projectedPoint.y < 10 && projectedPoint.x > 20 && projectedPoint.x < 1180) { // Bottom wall
+        projectedPoint.y = 0;
+    } else {
+        return currentPos;
+    }
+
+    projectedPoint.x = projectedPoint.x - dist * cos((valid_angle + 180) * PI / 180.0);
+    projectedPoint.y = projectedPoint.y - dist * sin((valid_angle + 180) * PI / 180.0);
+
+    currentPos.x = projectedPoint.x;
+    currentPos.y = projectedPoint.y;
+   
+    return currentPos;
+}
+```
+
+Detects where the ennemy robot is.
+Author: Alexander
+```c
+bool isEnnemyInFront(Pos currentPos, sensor_t ultrasonic) {
+    if (abs(getAvgUltrasonicDistance(ultrasonic, 5) - expectedUsMeasure(currentPos)) < 150) {
+        return true;
+    }
+}
+
+char* detectEnnemy(Pos currentPos, sensor_t ultrasonic) {
+    if (isEnnemyInFront(currentPos, ultrasonic)) {
+        return "Ennemy is in front of the robot";
+    }
+
+    if (currentPos.x > 650 && currentPos.y > 600) {
+        return "Ennemy is probably on the left side of the arena";
+    }
+
+    if (currentPos.x < 550 && currentPos.y > 600) {
+        return "Ennemy is probably on the right side of the arena";
+    }
+
+    return "Whereabouts of ennemy are unknown"
+
+}
+```
 
 # Main algorithm that runs during the round
 
