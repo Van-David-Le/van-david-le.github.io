@@ -226,10 +226,9 @@ float get_gyro_value(uint8_t snGyro){
 ```
 
 ## Claw
-
+Helper function to use the robot's arm/claw.Negative degress pull the arm towards the robot 
+Author : Guillaume
 ```c
-/* Helper function to use the robot's arm/claw.Negative degress pull the arm towards the robot 
-Author : Guillaume*/
 void claw(uint8_t sn_arm, int degrees, int speed){
     set_tacho_speed_sp(sn_arm, max_speed);
     set_tacho_stop_action_inx(sn_arm , TACHO_BRAKE);
