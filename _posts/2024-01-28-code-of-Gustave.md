@@ -242,7 +242,7 @@ void claw(uint8_t sn_arm, int degrees, int speed){
 
 The robot updates a map of the arena, allowing to correct its position and detect the ennemy robot.
 
-Gets an averaged measure of the ultrasonic sensor, to eliminated wrong readings.
+Gets an averaged measure of the ultrasonic sensor, to eliminated wrong readings. \
 Author: Alexander
 ```c
 int getAvgUltrasonicDistance(sensor_t ultrasonic, int readings) {
@@ -258,7 +258,7 @@ int getAvgUltrasonicDistance(sensor_t ultrasonic, int readings) {
 }
 ```
 
-Calculates the expected measure of the ultrasonic sensor, to compare with real readings.
+Calculates the expected measure of the ultrasonic sensor, to compare with real readings. \
 Author: Alexander
 
 ```c
@@ -311,7 +311,7 @@ int expectedUsMeasure(Pos currentPos) {
 }
 ```
 
-Corrects the assumed position of the robot to one that is more accurate with the sensor readings.
+Corrects the assumed position of the robot to one that is more accurate with the sensor readings. \
 Author: Alexander
 
 ```c
@@ -350,7 +350,7 @@ Pos correctPos(Pos currentPos, sensor_t gyro) {
 }
 ```
 
-Detects where the ennemy robot is.
+Detects where the ennemy robot is. \
 Author: Alexander
 ```c
 bool isEnnemyInFront(Pos currentPos, sensor_t ultrasonic) {
